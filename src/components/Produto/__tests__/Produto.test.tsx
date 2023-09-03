@@ -15,7 +15,7 @@ const jogo = {
 describe('Testes para o componente produto', () => {
   test('Deve renderizar corretamente', () => {
     renderizaComProvider(<Produto game={jogo} />)
-    expect(screen.getByText('RPG')).toBeInTheDocument()
+    expect(screen.getAllByAltText('Hagwarts Lagacy')).toBeInTheDocument()
   })
 
   test('Deve adicionar um item ao carrinho', () => {

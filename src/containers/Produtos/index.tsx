@@ -1,12 +1,12 @@
-import Produto from '../components/Produto'
-import { useGetJogosQuery } from '../services/api'
+import Produto from '../../components/Produto'
+import { useGetJogosQuery } from '../../services/api'
 
 import * as S from './styles'
 
 const Produtos = () => {
   const { data: jogos, isLoading } = useGetJogosQuery()
 
-  if (isLoading) return <h2>Carregando...</h2>
+  if (isLoading) return <h2 data-testid="carreg...">Carregando...</h2>
 
   return (
     <>
